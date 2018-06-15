@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id' do
     @post = Post.find(params[:id].to_i)
-    @post
+    @post.name
     #erb :show
   end
 
