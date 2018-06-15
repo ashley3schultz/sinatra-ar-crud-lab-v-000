@@ -41,19 +41,9 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  get '/posts/:id/delete' do
-    a = 'get'
-    binding.pry
-    #@post = Post.find(params[:id].to_i)
-    #erb :delete
-  end
-
-
   delete '/posts/:id/delete' do
-    a = 'detele'
-    binding.pry
-    #@post = Post.find(params[:id].to_i)
-    #@post.destroy
+    @post = Post.find(params[:id].to_i)
+    erb :delete
   end
 
 end
