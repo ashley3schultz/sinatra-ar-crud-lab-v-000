@@ -52,7 +52,6 @@ class ApplicationController < Sinatra::Base
   delete '/posts/:id/delete' do
     a = 'detele'
     binding.pry
-    'detele'
     #@post = Post.find(params[:id].to_i)
     #@post.destroy
   end
