@@ -52,7 +52,6 @@ class ApplicationController < Sinatra::Base
     binding.pry
     @post = Post.find(params[:id].to_i)
     @post.destroy
-    erb :index
   end
 
 end
