@@ -36,7 +36,8 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  post '/posts/:id' do
+  patch '/posts/:id' do
+    binding.pry
     @post = Post.find(params[:id].to_i)
     @post.update(name: params[:name], content: params[:content])
     erb :show
@@ -47,6 +48,4 @@ class ApplicationController < Sinatra::Base
     @post.destroy
     erb :delete
   end
-
-
 end
