@@ -26,9 +26,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id' do
-    @p = Post.find(1)
-binding.pry
-    #erb :show
+    @post = Post.find(1)
+    erb :show
   end
 
   get '/posts/:id/edit' do
